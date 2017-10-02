@@ -1,0 +1,65 @@
+<!-- Author: Taylor Walenczyk -->
+
+<!DOCTYPE html>
+<html>
+<body>
+	<h2>Welcome to the Web Store!</h2>
+	
+	<form action="customerBackend.php" method="POST">
+		<h4>Credentials</h4>
+		Username: <input type="text" name="username" required><br>
+		Password: <input type="text" name="password" required><br>
+		
+
+		<h4>Items</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Price</th>
+					<th>Quantity</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Bananas<td>
+					<td>$0.25</td>
+					<td><input type="text" name="ban_q" required></td>
+				</tr>
+				<tr>
+                                        <td>Apples<td>
+					<td>$0.35</td>
+					<td><input type="text" name="app_q" required></td>
+                                </tr>
+				<tr>
+                                        <td>Oranges<td>
+					<td>$0.30</td>
+					<td><input type="text" name="or_q" required></td>
+                                </tr>
+			</tbody>
+		</table>
+
+		<h4>Shipping Options</h4>
+                <table>
+                        <tbody>
+                                <tr>
+                                        <td>Overnight<td>
+					<td>$50.00</td>
+                                        <td><input type="radio" name="shipping" value="overnight"></td>
+                                </tr>
+                                <tr>
+                                        <td>3 Day<td>
+                                        <td>$5.00</td>
+					<td><input type="radio" name="shipping" value="three_day"></td>
+                                </tr>
+                                <tr>
+                                        <td>7 Day<td>
+					<td>Free</td>
+                                        <td><input type="radio" name="shipping" value="seven_day" checked="checked" ></td>
+                                </tr>
+                        </tbody>
+                </table>
+		<input type="submit" value="Submit">	
+	</form>
+</body>
+</html>
