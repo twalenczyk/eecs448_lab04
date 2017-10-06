@@ -35,6 +35,25 @@ Thank you for your purchase!
                                 <td><?php echo $_POST["or_q"]; ?></td>
                         	<td><?php $sub_or = $_POST["or_q"] * .25; echo $sub_or; ?></td> 
 			</tr>
+			<tr>
+				<td>Shipping</td>
+				<td><?php echo $_POST["shipping"]; ?></td>
+				<td>
+					<?php
+						$ship = $_POST["shipping"];
+
+						if($ship == "Overnight") {
+							$a = "$50.00";
+						} elseif($ship == "3 Day") {
+							$a = "$5.00";
+						} else {
+							$a = "$0.00";
+						}
+						
+						echo $a;
+					?>
+				</td>	
+			</tr>
 		<tbody>
 	</table>
 	<br>
