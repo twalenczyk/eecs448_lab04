@@ -21,19 +21,37 @@ Thank you for your purchase!
 				<td>Bananas</td>
 				<td>$0.25</td>
 				<td><?php echo $_POST["ban_q"]; ?></td>
-				<td><?php $sub_ban = $_POST["ban_q"] * .25; echo $sub_ban; ?></td>  
+				<td>
+					<?php 
+						$sub_ban = $_POST["ban_q"] * .25; 
+						setlocale(LC_MONETARY, 'en_US');
+						echo money_format('%i', $sub_ban); 
+					?>
+				</td>  
 			</tr>
 			<tr>
                                 <td>Apples</td>
 				<td>$0.35</td>
                                 <td><?php echo $_POST["app_q"]; ?></td>
-				<td><?php $sub_app = $_POST["app_q"] * .35; echo $sub_app; ?></td> 
+				<td>
+					<?php 
+						$sub_app = $_POST["app_q"] * .35; 
+						setlocale(LC_MONETARY, 'en_US');
+						echo money_format('%i', $sub_app);
+					?>
+				</td> 
                         </tr>
 			<tr>
                                 <td>Oranges</td>
 				<td>$0.30</td>
                                 <td><?php echo $_POST["or_q"]; ?></td>
-                        	<td><?php $sub_or = $_POST["or_q"] * .25; echo $sub_or; ?></td> 
+                        	<td>
+					<?php 
+						$sub_or = $_POST["or_q"] * .25;
+						setlocale(LC_MONETARY, 'en_US'); 
+						echo money_format('%i', $sub_or); 
+					?>
+				</td> 
 			</tr>
 			<tr>
 				<td>Shipping</td>
@@ -57,7 +75,12 @@ Thank you for your purchase!
 		<tbody>
 	</table>
 	<br>
-	Total: <?php $tot = $sub_ban + $sub_app + $sub_or; echo $tot; ?>
+	Total
+        <?php 
+                $tot = $sub_ban + $sub_app + $sub_or;
+                setlocale(LC_MONETARY, 'en_US');
+        	echo money_format('%i', $tot);
+        ?>
 </div>
 
 </body>
