@@ -18,7 +18,7 @@
 			<tr>
 				<?php for($j = 0; $j <= 100; $j++): ?>
 					<?php if($j == 0): ?>
-						<td><?php echo "$i"; ?></td>					
+						<td><b><?php echo "$i"; ?></b></td>					
 					<?php else: ?>
 						<td>
 							<?php
