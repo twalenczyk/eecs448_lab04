@@ -2,13 +2,16 @@
 
 <!DOCTYPE html>
 <html>
+<head>
+	<script type="text/javascript" src="formChecker.js"></script>
+</head>
 <body>
 	<h2>Welcome to the Web Store!</h2>
 	
-	<form action="customerBackend.php" method="POST">
+	<form action="customerBackend.php" method="POST" onsubmit="return validate()">
 		<h4>Credentials</h4>
-		Username: <input type="text" name="username" required><br>
-		Password: <input type="text" name="password" required><br>
+		Email: <input type="text" name="username" id="email" required><br>
+		Password: <input type="text" name="password" id="password" required><br>
 		
 
 		<h4>Items</h4>
@@ -24,17 +27,17 @@
 				<tr>
 					<td>Bananas<td>
 					<td>$0.25</td>
-					<td><input type="text" name="ban_q" required></td>
+					<td><input type="text" name="ban_q" id="ban_q" required></td>
 				</tr>
 				<tr>
                                         <td>Apples<td>
 					<td>$0.35</td>
-					<td><input type="text" name="app_q" required></td>
+					<td><input type="text" name="app_q" id="app_q" required></td>
                                 </tr>
 				<tr>
                                         <td>Oranges<td>
 					<td>$0.30</td>
-					<td><input type="text" name="or_q" required></td>
+					<td><input type="text" name="or_q" id="or_q" required></td>
                                 </tr>
 			</tbody>
 		</table>
