@@ -1,0 +1,17 @@
+/* Author: Taylor Walenczyk */
+
+.link-row {
+    height: 50px;
+    margin: 10px;
+    padding-top: 25px;
+    background-color: darkseagreen;
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
