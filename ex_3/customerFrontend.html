@@ -4,6 +4,7 @@
 <html>
 <head>
 	<script type="text/javascript" src="formChecker.js"></script>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 	<h2>Welcome to the Web Store!</h2>
@@ -25,18 +26,18 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>Bananas<td>
-					<td>$0.25</td>
+					<td class="item">Bananas</td>
+					<td class="price">$0.25</td>
 					<td><input type="text" name="ban_q" id="ban_q" required></td>
 				</tr>
 				<tr>
-                                        <td>Apples<td>
-					<td>$0.35</td>
+                                        <td class="item">Apples</td>
+					<td class="price">$0.35</td>
 					<td><input type="text" name="app_q" id="app_q" required></td>
                                 </tr>
 				<tr>
-                                        <td>Oranges<td>
-					<td>$0.30</td>
+                                        <td class="item">Oranges</td>
+					<td class="price">$0.30</td>
 					<td><input type="text" name="or_q" id="or_q" required></td>
                                 </tr>
 			</tbody>
@@ -46,18 +47,18 @@
                 <table>
                         <tbody>
                                 <tr>
-                                        <td>Overnight<td>
-					<td>$50.00</td>
+                                        <td class="item">Overnight</td>
+					<td class="price">$50.00</td>
                                         <td><input type="radio" name="shipping" value="Overnight"></td>
                                 </tr>
                                 <tr>
-                                        <td>3 Day<td>
-                                        <td>$5.00</td>
+                                        <td class="item">3 Day</td>
+                                        <td class="price">$5.00</td>
 					<td><input type="radio" name="shipping" value="3 Day"></td>
                                 </tr>
                                 <tr>
-                                        <td>7 Day<td>
-					<td>Free</td>
+                                        <td class="item">7 Day</td>
+					<td class="price">Free</td>
                                         <td><input type="radio" name="shipping" value="7 Day" checked="checked" ></td>
                                 </tr>
                         </tbody>

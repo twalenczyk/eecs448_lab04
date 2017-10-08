@@ -1,4 +1,8 @@
 <html>
+
+<head>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
 <body>
 
 Thank you for your purchase!
@@ -18,8 +22,8 @@ Thank you for your purchase!
 		</thead>
 		<tbody>
 			<tr>
-				<td>Bananas</td>
-				<td>$0.25</td>
+				<td class="item">Bananas</td>
+				<td class="price">$0.25</td>
 				<td><?php echo $_POST["ban_q"]; ?></td>
 				<td>
 					<?php 
@@ -30,8 +34,8 @@ Thank you for your purchase!
 				</td>  
 			</tr>
 			<tr>
-                                <td>Apples</td>
-				<td>$0.35</td>
+                                <td class="item">Apples</td>
+				<td class="price">$0.35</td>
                                 <td><?php echo $_POST["app_q"]; ?></td>
 				<td>
 					<?php 
@@ -42,8 +46,8 @@ Thank you for your purchase!
 				</td> 
                         </tr>
 			<tr>
-                                <td>Oranges</td>
-				<td>$0.30</td>
+                                <td class="item">Oranges</td>
+				<td class="price">$0.30</td>
                                 <td><?php echo $_POST["or_q"]; ?></td>
                         	<td>
 					<?php 
@@ -54,30 +58,31 @@ Thank you for your purchase!
 				</td> 
 			</tr>
 			<tr>
-				<td>Shipping</td>
-				<td><?php echo $_POST["shipping"]; ?></td>
+				<td class="item">Shipping</td>
+				<td class="price"><?php echo $_POST["shipping"]; ?></td>
+				<td>1</td>
 				<td>
 					<?php
 						$ship = $_POST["shipping"];
 
 						if($ship == "Overnight") {
-							$a = "$50.00";
+							$a = 50;
 						} elseif($ship == "3 Day") {
-							$a = "$5.00";
+							$a = 5;
 						} else {
-							$a = "$0.00";
+							$a = 0;
 						}
 						
-						echo $a;
+						echo money_format('%i', $a);
 					?>
 				</td>	
 			</tr>
 		<tbody>
 	</table>
 	<br>
-	Total
+	<b>Total:</b>
         <?php 
-                $tot = $sub_ban + $sub_app + $sub_or;
+                $tot = $sub_ban + $sub_app + $sub_or + $a;
                 setlocale(LC_MONETARY, 'en_US');
         	echo money_format('%i', $tot);
         ?>

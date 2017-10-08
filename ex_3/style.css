@@ -1,5 +1,36 @@
 /* Author: Taylor Walenczyk */
 
-table {
-	border: 1px solid grey;
+body {
+	background-color: lemonchiffon;
+}
+
+table, tr, td {
+	border: 1px solid lightgrey;
+	border-collapse: collapse;
+}
+
+td {
+	padding: 5px;
+}
+
+td.item {
+	background-color: steelblue;
+}
+
+td.price {
+	background-color: peachpuff;
+}
+
+th {
+	background-color: lightgrey;
+}
+
+table input {
+	border: none;
+}
+
+/* backend specific */
+
+.receipt {
+	margin: 10px;
 }
